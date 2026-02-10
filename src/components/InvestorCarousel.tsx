@@ -124,15 +124,16 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
           <div
             key={`${logo}-${index}`}
             ref={index === 0 ? itemRef : null}
-            className="flex-shrink-0 w-full sm:w-full lg:w-[calc(50% - 1.5rem)] xl:w-[calc(33.333% - 2rem)] flex items-center justify-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow min-h-[120px]"
+            // className="flex-shrink-0 w-full sm:w-full lg:w-[calc(50% - 1.5rem)] xl:w-[calc(33.333% - 2rem)] flex items-center justify-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow min-h-[120px]"
           >
-            <div className="relative w-40 h-20">
+            <div className="relative w-80 h-40">
               <Image
                 src={logo}
                 alt={`Investor logo ${index + 1}`}
                 fill
                 className="object-contain"
-                sizes="160px"
+                sizes="320px"
+                
               />
             </div>
           </div>
@@ -151,11 +152,11 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
       )}
 
       {/* Dots Navigation */}
-      <div className="flex justify-center space-x-2 mt-4">
+      <div className="flex justify-center space-x-6 mt-4">
         {logos.map((_, index) => (
           <div
             key={index}
-            className={`w-3 h-3 rounded-full cursor-pointer ${index === currentIndex ? 'bg-teal-500' : 'bg-gray-300'}`}
+            className={`w-3 h-3 rounded-full cursor-pointer ${index === currentIndex ? 'bg-teal-500' : 'bg-gray-800'}`}
             onClick={() => scrollToIndex(index)}
           />
         ))}

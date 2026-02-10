@@ -153,8 +153,8 @@ export default function Home() {
       {/* Section 4: Investors */}
       <section className="py-20 bg-gray-100 z-10">
         <div className="container mx-auto px-4">
-          <h3 className="text-4xl font-bold text-center text-gray-800 mb-12">
-            Our Investors & Partners
+          <h3 className="text-5xl font-light text-center text-black mb-12">
+            Our Investors 
           </h3>
           <InvestorCarousel logos={INVESTOR_LOGOS} />
         </div>
