@@ -4,7 +4,8 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="bg-teal-700 text-white">
+        <footer   id="contact-us"
+        className="bg-teal-700 text-white">
             {/* Main footer content */}
             <div className="max-w-7xl mx-auto px-4 py-8">
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8">

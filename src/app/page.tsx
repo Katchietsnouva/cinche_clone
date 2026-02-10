@@ -60,7 +60,7 @@ export default function Home() {
       <VideoHero videoScale={videoScale} />
 
       {/* Section 1: Initial Hero Text over Video */}
-      <motion.section
+      <motion.section id="home"
         style={{ opacity: heroOpacity }}
         className="relative h-screen flex flex-col items-center justify-center text-center z-20 pointer-events-none max-w-[60vw] lg:max-w-[70vw] mx-auto">
         <motion.h1
@@ -99,17 +99,21 @@ export default function Home() {
       </motion.section>
 
       {/* Section 2: Scroll-Revealed Text & Button */}
-      <ScrollRevealSection
-        textOpacity={textOpacity}
-        buttonY={buttonY}
-        scrollYProgress={scrollYProgress}
-      />
+      <motion.section id="how-to-join">
+        <ScrollRevealSection
+          textOpacity={textOpacity}
+          buttonY={buttonY}
+          scrollYProgress={scrollYProgress}
+        />
+      </motion.section>
+
 
       {/* Section 3: Supply Chain & Product Carousel */}
-      <section className="relative min-h-screen bg-mycolor-warmWhite flex flex-col justify-center items-center px-4 py-16 z-10">
-        <div className="max-w-4xl mx-auto text-center mb-12"> 
+      <section id="what-we-grow" 
+      className="relative min-h-screen bg-mycolor-warmWhite flex flex-col justify-center items-center px-4 py-16 z-10">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <div className='w-full mx-auto flex justify-center items-center '>
-          {/* <div className="w-full flex items-center justify-center gap-8 mx-auto">  */}
+            {/* <div className="w-full flex items-center justify-center gap-8 mx-auto">  */}
             <div className='flex flex-row gap-3'>
               {INVESTOR_LOGOS.map((_, index) => (
                 <div
@@ -175,7 +179,7 @@ export default function Home() {
 
 
       {/* Section 4: Investors */}
-      <section className="py-20 bg-gray-100 z-10">
+      <section   className="py-20 bg-gray-100 z-10">
         <div className="container mx-auto px-4">
           <h3 className="text-5xl font-light text-center text-black mb-12">
             Our Investors
