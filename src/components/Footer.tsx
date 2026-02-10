@@ -17,38 +17,34 @@ export default function Footer() {
                             height={310}
                             className="mb-2 mx-auto"
                         />
-                        <p className="text-sm md:text-base opacity-90">Turning idle land into income</p>
+                        <p className="text-sm md:text-xl opacity-90">Turning idle land into income</p>
                     </div>
 
-                    {/* Right: Contact Info */}
-                    <div className="text-centre  items-center lg:text-left text-xl">
-                        <h6 className=" font-semibold mb-3 uppercase tracking-wide">Contact Info</h6>
 
-                        <ul className="space-y-2  ">
-                            <li className="flex items-center justify-end lg:justify-end gap-2">
+                    <div className="flex flex-col items-center lg:items-start text-xl mt-20">
+                        <h6 className=" font-semibold mb-3 uppercase tracking-wide mb-10">Contact Info</h6>
+
+                        <ul className="space-y-2   ">
+                            <li className="flex items-center  gap-2">
                                 <Mail size={20} className="text-teal-500" />
-
                                 <span>info@cinchmarkets.com</span>
                             </li>
 
-                            <li className="flex items-center justify-end lg:justify-end gap-2">
-
+                            <li className="flex items-center   gap-2">
                                 <MapPinIcon className='text-teal-500' />
                                 <span>Kenya • Ghana • USA</span>
                             </li>
                         </ul>
 
-                        {/* Social Icons */}
-                        <div className="flex justify-end gap-4 mt-4" id="contact">
+                        <div className="flex  gap-4 mt-4" id="contact">
                             <a
                                 href="https://www.linkedin.com/company/cinch-markets-ltd/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:opacity-80 transition"
                             >
-                                <LucideLinkedin size={20} /> {/* w-5 h-5 = 20px */}
+                                <LucideLinkedin size={20} />
                             </a>
-
 
                             <a
                                 href="https://www.youtube.com/watch?v=kWAPuX0ODrc"
@@ -56,7 +52,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="hover:opacity-80 transition"
                             >
-                                <Youtube size={20} /> {/* w-5 h-5 = 20px */}
+                                <Youtube size={20} />
                             </a>
                         </div>
                     </div>
