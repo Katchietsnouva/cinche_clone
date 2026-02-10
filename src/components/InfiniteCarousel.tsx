@@ -2,7 +2,7 @@
 'use client';
 import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Install: npm install lucide-react
-import Image from  'next/image';
+import Image from 'next/image';
 interface Item {
     title: string;
     icon: string;
@@ -40,15 +40,15 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
         <div className="w-full max-w-6xl relative px-12">
             {/* Left Chevron */}
             {/* {showLeftChevron && ( */}
-                <button
-                    aria-label='button'
-                    onClick={() => scroll('left')}
-                    // className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
-                    className='absolute left-0 top-1/2 -translate-y-1/2 z-30 text-teal-500 '
+            <button
+                aria-label='button'
+                onClick={() => scroll('left')}
+                // className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
+                className='absolute left-0 top-1/2 -translate-y-1/2 z-30 text-teal-500 '
 
-                >
-                    <ChevronLeft size={56} />
-                </button>
+            >
+                <ChevronLeft size={56} />
+            </button>
             {/* )} */}
 
             {/* Carousel Container */}
@@ -61,7 +61,9 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
                     <div
                         key={index}
                         // rounded-2xl shadow-lg shadow-xl
-                        className="flex-shrink-0 w-56 bg-transparent p-6 flex flex-col items-center hover:scale-110  transition-all duration-300"
+                        // className="flex-shrink-0 w-56 bg-transparent p-6 flex flex-col items-center hover:scale-110  transition-all duration-300"
+                        className="flex-shrink-0 sm:w-full md:w-1/2 xl:w-1/3 bg-transparent p-6 flex flex-col items-center hover:scale-110 transition-all duration-300"
+
                     >
                         {/* <div className="text-5xl mb-4">{item.icon}</div> */}
                         <Image
@@ -81,14 +83,14 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
 
             {/* Right Chevron */}
             {/* {showRightChevron && ( */}
-                <button
-                    aria-label='button'
-                    onClick={() => scroll('right')}
-                    // className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
-                    className='absolute right-0 top-1/2 -translate-y-1/2 z-30 text-teal-500 '
-                >
-                    <ChevronRight size={56} />
-                </button>
+            <button
+                aria-label='button'
+                onClick={() => scroll('right')}
+                // className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
+                className='absolute right-0 top-1/2 -translate-y-1/2 z-30 text-teal-500 '
+            >
+                <ChevronRight size={56} />
+            </button>
             {/* )} */}
         </div>
     );
