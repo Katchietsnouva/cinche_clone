@@ -58,9 +58,16 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
                 {duplicatedItems.map((item, index) => (
                     <div
                         key={index}
-                        className="flex-shrink-0 w-56 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition-shadow"
+                        // rounded-2xl shadow-lg 
+                        className="flex-shrink-0 w-56 bg-transparent p-6 flex flex-col items-center hover:shadow-xl transition-shadow"
                     >
-                        <div className="text-5xl mb-4">{item.icon}</div>
+                        {/* <div className="text-5xl mb-4">{item.icon}</div> */}
+                        <img
+                            src={item.icon}
+                            alt={item.title}
+                            className="w-20 h-20 object-contain mb-4"
+                            loading="lazy"
+                        />
                         <h4 className="text-xl font-semibold text-center text-gray-800">
                             {item.title}
                         </h4>
