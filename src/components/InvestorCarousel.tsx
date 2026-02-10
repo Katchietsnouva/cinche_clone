@@ -104,7 +104,7 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
     >
      
       {/* Left Chevron */}
-      {showLeftChevron && (
+      {/* {showLeftChevron && (
         <button
           onClick={() => scroll('left')}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg border border-gray-200 hover:scale-110 transition-transform"
@@ -112,7 +112,7 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
         >
           <ChevronLeft size={28} className="text-gray-700" />
         </button>
-      )}
+      )} */}
 
       {/* Carousel Container */}
       <div
@@ -143,7 +143,7 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
       </div>
 
       {/* Right Chevron */}
-      {showRightChevron && (
+      {/* {showRightChevron && (
         <button
           onClick={() => scroll('right')}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg border border-gray-200 hover:scale-110 transition-transform"
@@ -151,7 +151,7 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
         >
           <ChevronRight size={28} className="text-gray-700" />
         </button>
-      )}
+      )} */}
 
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-6 mt-4">
