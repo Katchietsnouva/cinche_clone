@@ -7,6 +7,7 @@ import VideoHero from '@/components/VideoHero';
 import ScrollRevealSection from '@/components/ScrollRevealSection';
 import InfiniteCarousel from '@/components/InfiniteCarousel';
 import InvestorCarousel from '@/components/InvestorCarousel';
+import Image from 'next/image';
 
 // Carousel Data
 const PRODUCTS = [
@@ -43,6 +44,8 @@ export default function Home() {
   const videoScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [0, 0, 1]);
   const buttonY = useTransform(scrollYProgress, [0.25, 0.4], [50, 0]);
+  // add transform
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   return (
     <main ref={containerRef} className="relative">
@@ -50,15 +53,34 @@ export default function Home() {
       <VideoHero videoScale={videoScale} />
 
       {/* Section 1: Initial Hero Text over Video */}
-      <section className="relative h-screen flex flex-col items-center justify-center text-center z-20 pointer-events-none">
+      <motion.section
+        style={{ opacity: heroOpacity }}
+        className="relative h-screen flex flex-col items-center justify-center text-center z-20 pointer-events-none max-w-[60vw] lg:max-w-[70vw] mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-7xl md:text-9xl font-extralight text-white mb-4"
         >
-          Cinch
+          {/* Cinch */}
         </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="mb-4"
+        >
+          <Image
+            src="/Cinch-Script-logo-white.png"
+            alt="Cinch"
+            width={800}
+            height={300}
+            className="mx-auto mb-2 "
+            priority
+          />
+        </motion.div>
+
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -67,7 +89,7 @@ export default function Home() {
         >
           Turning idle land into income
         </motion.h2>
-      </section>
+      </motion.section>
 
       {/* Section 2: Scroll-Revealed Text & Button */}
       <ScrollRevealSection
