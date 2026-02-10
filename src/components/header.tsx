@@ -279,7 +279,7 @@ export default function Header() {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: easeInOut, delay: 0.5 }}
-            > 
+            >
                 {navItems.map(({ label, id }) => (
                     <button
                         key={id}
@@ -294,10 +294,13 @@ export default function Header() {
                             //             ? "text-white"
                             //             : "text-black"
 
-                            currentSection === "home" || currentSection === "how-to-join"
-                                ? "text-white"
-                                : "text-black"
-                            }`}
+                            currentSection === id ? "text-teal-500" :
+                                currentSection === "home" || currentSection === "how-to-join"
+                                    ? "text-white"
+                                    : "text-black"
+                            }`
+                        }
+                        // ${currentSection === id ? "text-teal-500" : "text-black"}
                         type="button"
                     >
                         {label}
@@ -350,7 +353,10 @@ export default function Header() {
                                 <motion.button
                                     key={id}
                                     onClick={() => scrollToSection(id, () => setMenuOpen(false))}
-                                    className={`text-lg font-medium mb-6 text-left focus:outline-none text-black `}
+                                    // className={`text-lg font-medium mb-6 text-left focus:outline-none text-black `}
+                                    className={`text-lg font-medium mb-6 text-left focus:outline-none hover:text-teal-500
+                                        ${currentSection === id ? "text-teal-500" : "text-black"}
+                                    `}
                                     type="button"
                                     custom={i}
                                     variants={drawerItemVariants}
