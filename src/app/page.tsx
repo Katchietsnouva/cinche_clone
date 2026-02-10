@@ -11,13 +11,19 @@ import Image from 'next/image';
 
 // Carousel Data
 const PRODUCTS = [
-  { title: 'Seed Replication', icon: '🌱' },
-  { title: 'Domestic Vegetables', icon: '🥬' },
-  { title: 'Export Vegetables', icon: '✈️' },
-  { title: 'Herbs', icon: '🌿' },
-  { title: 'Summer Flowers', icon: '🌻' },
-  { title: 'Broad Acre Crops', icon: '🌾' },
-  { title: 'Perennial Trees', icon: '🌳' },
+  // { title: 'Seed Replication', icon: '🌱' },
+  { title: 'Seed Replication', icon: 'public/secure_supply/seed_repl.png' },
+  // { title: 'Domestic Vegetables', icon: '🥬' },
+  { title: 'Domestic Vegetables', icon: 'public/secure_supply/vegetable-1.png' },
+  // { title: 'Export Vegetables', icon: '✈️' },
+  { title: 'Export Vegetables', icon: 'public/secure_supply/export_Vegetables.png' },
+  // { title: 'Herbs', icon: '🌿' },
+  { title: 'Herbs', icon: 'public/secure_supply/herbs.png' },
+  // { title: 'Summer Flowers', icon: '🌻' },
+  { title: 'Summer Flowers', icon: 'public/secure_supply/flower.png' },
+  // { title: 'Broad Acre Crops', icon: '🌾' },
+  // { title: 'Broad Acre Crops', icon: '🌾' },
+  // { title: 'Perennial Trees', icon: '🌳' },
 ];
 
 // Replace these paths with your actual investor logo files in /public
