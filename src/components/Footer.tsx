@@ -36,7 +36,7 @@ export default function Footer() {
                             </li>
                         </ul>
 
-                        <div className="flex  gap-4 mt-4" id="contact">
+                        <div className="flex  gap-4 mt-4 mb-8" id="contact">
                             <a
                                 href="https://www.linkedin.com/company/cinch-markets-ltd/"
                                 target="_blank"
