@@ -126,6 +126,30 @@ export default function Home() {
         <InfiniteCarousel items={PRODUCTS} />
       </section>
 
+      {/* Section 3: Supply Chain & Product Carousel */}
+      {/* <section className="relative min-h-screen bg-mycolor-warmWhite flex flex-col justify-center items-center px-4 sm:px-6 py-16 z-10">
+        <div className="max-w-4xl mx-auto text-center mb-8 sm:mb-12">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-3xl sm:text-4xl md:text-5xl text-gray-800"
+          >
+            Secure your supply chain with Cinch.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-medium"
+          >
+            We create purpose built irrigated farms to meet your raw material needs
+          </motion.p>
+        </div>
+        <InfiniteCarousel items={PRODUCTS} />
+      </section> */}
+
+
+
       {/* Section 4: Investors */}
       <section className="py-20 bg-gray-100 z-10">
         <div className="container mx-auto px-4">

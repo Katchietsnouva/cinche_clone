@@ -292,36 +292,7 @@ body {
 
   animation: spin 1s ease infinite;
 }
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-accent_track_dark);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  /* background: #84cc16; */
-  background: var(--scrollbar-accent);
-  border-radius: 10px;
-  border: 3px solid var(--scrollbar-accent_track_dark);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  /* background: #a3e635; */
-  background: var(--scrollbar-accent);
-}
-
+ 
 /* * {
   scrollbar-color: #84cc16 #065f46;
   scrollbar-width: thin;
