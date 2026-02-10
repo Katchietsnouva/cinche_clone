@@ -313,7 +313,7 @@ export default function Header() {
                 <button
                     aria-label="Open menu"
                     onClick={() => setMenuOpen(true)}
-                    className="text-white text-2xl font-bold p-2 focus:outline-none"
+                    className="text-black text-2xl font-bold p-2 focus:outline-none"
                 >
                     ☰
                 </button>
