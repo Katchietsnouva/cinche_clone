@@ -21,11 +21,15 @@ const PRODUCTS = [
 
 // Replace these paths with your actual investor logo files in /public
 const INVESTOR_LOGOS = [
-  '/investors/logo-dell.png', // Example from Dell Foundation[citation:2]
-  '/investors/logo-finca.png', // Example from FINCA Ventures[citation:6]
-  '/investors/logo-mulago.png', // Example from Mulago Foundation[citation:5]
-  '/investors/logo-ldn.png', // Example from LDN Fund[citation:3]
-  '/investors/logo-mercycorp.png',
+  '/investors_logos/l2.png',
+  '/investors_logos/l3.png',
+  '/investors_logos/l5.png',
+  '/investors_logos/l6.png',
+  '/investors_logos/l7.png',
+  '/investors_logos/l8.png',
+  '/investors_logos/minch.png',
+  '/investors_logos/fact.png',
+  '/investors_logos/beyond.png',
 ];
 
 export default function Home() {
@@ -78,7 +82,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-2xl md:text-3xl text-gray-800"
+            className="text-4xl md:text-5xl text-gray-800"
           >
             Secure your supply chain with Cinch.
           </motion.p>
