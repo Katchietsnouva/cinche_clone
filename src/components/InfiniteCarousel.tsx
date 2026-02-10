@@ -166,12 +166,12 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
                         <Image
                             src={item.icon}
                             alt={item.title}
-                            className="w-80 h-80 object-contain mb-4"
+                            className="w-48 h-48 object-contain mb-4"
                             loading="lazy"
                             width={100}
                             height={100}
                         />
-                        <h4 className="text-xl font-light text-center text-gray-800">
+                        <h4 className="text-3xl font- text-center text-gray-800">
                             {item.title}
                         </h4>
                     </div>

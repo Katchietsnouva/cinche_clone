@@ -107,9 +107,9 @@ export default function Home() {
 
       {/* Section 3: Supply Chain & Product Carousel */}
       <section className="relative min-h-screen bg-mycolor-warmWhite flex flex-col justify-center items-center px-4 py-16 z-10">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-
-          <div className='min-w-full mx-auto flex flex-row items-center '>
+        <div className="max-w-4xl mx-auto text-center mb-12"> 
+          <div className='w-full mx-auto flex justify-center items-center '>
+          {/* <div className="w-full flex items-center justify-center gap-8 mx-auto">  */}
             <div className='flex flex-row gap-3'>
               {INVESTOR_LOGOS.map((_, index) => (
                 <div
