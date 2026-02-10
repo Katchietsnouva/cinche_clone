@@ -273,7 +273,13 @@ export default function Header() {
     return (
         <header className="w-full bg-transparent">
             {/* Desktop nav */}
-            <nav className="hidden md:flex fixed top-4 right-8 z-50 space-x-12 text-sm font-medium">
+            {/* <nav className="hidden md:flex fixed top-4 right-8 z-50 space-x-12 text-sm font-medium"> */}
+            <motion.nav
+                className="hidden md:flex fixed top-4 right-8 z-50 space-x-12 text-sm font-medium"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: easeInOut, delay: 0.5 }}
+            > 
                 {navItems.map(({ label, id }) => (
                     <button
                         key={id}
@@ -297,7 +303,7 @@ export default function Header() {
                         {label}
                     </button>
                 ))}
-            </nav>
+            </motion.nav>
 
             {/* Mobile menu button */}
             <div className="md:hidden fixed top-4 right-4 z-60">
