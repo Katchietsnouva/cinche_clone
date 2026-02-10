@@ -99,7 +99,7 @@ export default function Home() {
       />
 
       {/* Section 3: Supply Chain & Product Carousel */}
-      <section className="relative min-h-screen bg-gradient-to-b from-white to-gray-50 flex flex-col justify-center items-center px-4 py-16 z-10">
+      <section className="relative min-h-screen bg-mycolor-warmWhite flex flex-col justify-center items-center px-4 py-16 z-10">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <motion.p
             initial={{ opacity: 0 }}
