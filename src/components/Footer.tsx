@@ -1,4 +1,4 @@
-import { Linkedin, LocationEditIcon, Mail, MapPin, MapPinIcon, Youtube } from 'lucide-react';
+import { Linkedin, LinkedinIcon, LocationEditIcon, LucideLinkedin, Mail, MapPin, MapPinIcon, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -46,7 +46,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 className="hover:opacity-80 transition"
                             >
-                                <Linkedin size={20} /> {/* w-5 h-5 = 20px */}
+                                <LucideLinkedin size={20} /> {/* w-5 h-5 = 20px */}
                             </a>
 
 
