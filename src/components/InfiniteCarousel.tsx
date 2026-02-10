@@ -2,7 +2,7 @@
 'use client';
 import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Install: npm install lucide-react
-
+import Image from  'next/image';
 interface Item {
     title: string;
     icon: string;
@@ -39,34 +39,38 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
     return (
         <div className="w-full max-w-6xl relative px-12">
             {/* Left Chevron */}
-            {showLeftChevron && (
+            {/* {showLeftChevron && ( */}
                 <button
                     aria-label='button'
                     onClick={() => scroll('left')}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
+                    // className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
+                    className='absolute left-0 top-1/2 -translate-y-1/2 z-30 text-teal-500 '
+
                 >
-                    <ChevronLeft size={28} />
+                    <ChevronLeft size={56} />
                 </button>
-            )}
+            {/* )} */}
 
             {/* Carousel Container */}
             <div
                 ref={scrollRef}
                 onScroll={handleScroll}
-                className="flex overflow-x-auto scroll-smooth space-x-8 py-8 no-scrollbar"
+                className="flex overflow-x-hidden scroll-smooth space-x-8 py-8 no-scrollbar "
             >
                 {duplicatedItems.map((item, index) => (
                     <div
                         key={index}
-                        // rounded-2xl shadow-lg 
-                        className="flex-shrink-0 w-56 bg-transparent p-6 flex flex-col items-center hover:shadow-xl transition-shadow"
+                        // rounded-2xl shadow-lg shadow-xl
+                        className="flex-shrink-0 w-56 bg-transparent p-6 flex flex-col items-center hover:scale-110  transition-all duration-300"
                     >
                         {/* <div className="text-5xl mb-4">{item.icon}</div> */}
-                        <img
+                        <Image
                             src={item.icon}
                             alt={item.title}
-                            className="w-20 h-20 object-contain mb-4"
+                            className="w-40 h-40 object-contain mb-4"
                             loading="lazy"
+                            width={100}
+                            height={100}
                         />
                         <h4 className="text-xl font-light text-center text-gray-800">
                             {item.title}
@@ -76,15 +80,16 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
             </div>
 
             {/* Right Chevron */}
-            {showRightChevron && (
+            {/* {showRightChevron && ( */}
                 <button
                     aria-label='button'
                     onClick={() => scroll('right')}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
+                    // className="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg border"
+                    className='absolute right-0 top-1/2 -translate-y-1/2 z-30 text-teal-500 '
                 >
-                    <ChevronRight size={28} />
+                    <ChevronRight size={56} />
                 </button>
-            )}
+            {/* )} */}
         </div>
     );
 }
