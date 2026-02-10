@@ -25,13 +25,13 @@ export default function Footer() {
                         <h6 className=" font-semibold mb-3 uppercase tracking-wide mb-10">Contact Info</h6>
 
                         <ul className="space-y-2   ">
-                            <li className="flex items-center  gap-2">
-                                <Mail size={20} className="text-teal-500" />
+                            <li className="flex items-center  gap-2 group">
+                                <Mail size={20} className="text-teal-500 group-hover:text-black" />
                                 <span>info@cinchmarkets.com</span>
                             </li>
 
-                            <li className="flex items-center   gap-2">
-                                <MapPinIcon className='text-teal-500' />
+                            <li className="flex items-center gap-2 group">
+                                <MapPinIcon className='text-teal-500 group-hover:text-black' />
                                 <span>Kenya • Ghana • USA</span>
                             </li>
                         </ul>
@@ -41,18 +41,18 @@ export default function Footer() {
                                 href="https://www.linkedin.com/company/cinch-markets-ltd/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:opacity-80 transition"
+                                className="hover:opacity-80 transition hover:text-teal-500 "
                             >
-                                <LucideLinkedin size={20} />
+                                <LucideLinkedin size={28} />
                             </a>
 
                             <a
                                 href="https://www.youtube.com/watch?v=kWAPuX0ODrc"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:opacity-80 transition"
+                                className="hover:opacity-80 transition hover:text-teal-500"
                             >
-                                <Youtube size={20} />
+                                <Youtube size={28} />
                             </a>
                         </div>
                     </div>
