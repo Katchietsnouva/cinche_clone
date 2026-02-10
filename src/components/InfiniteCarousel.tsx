@@ -68,7 +68,7 @@ export default function InfiniteCarousel({ items }: InfiniteCarouselProps) {
                             className="w-20 h-20 object-contain mb-4"
                             loading="lazy"
                         />
-                        <h4 className="text-xl font-semibold text-center text-gray-800">
+                        <h4 className="text-xl font-light text-center text-gray-800">
                             {item.title}
                         </h4>
                     </div>

@@ -118,7 +118,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto font-extralight"
+            className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto font-medium"
           >
             We create purpose built irrigated farms to meet your raw material needs
           </motion.p>
