@@ -1,63 +1,47 @@
-import Head from "next/head";
+import Link from "next/link";
+import { Mail } from "lucide-react"; // or any icon library you use
 
-export default function CustomHead() {
+export default function Header() {
     return (
-        <Head>
-            <meta charSet="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>Cinch Markets – Turning idle land into income</title>
-            <meta
-                name="description"
-                content="Turning idle land into income. Join Cinch and earn more money instantly with no risk. We create purpose-built irrigated farms for domestic and export markets."
-            />
-            <meta name="robots" content="max-image-preview:large" />
+        <header className="w-full bg-white dark:bg-black shadow-md">
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+                {/* Logo */}
+                <Link href="/">
+                    <a className="text-xl font-bold text-black dark:text-white">
+                        Cinch Markets
+                    </a>
+                </Link>
 
-            {/* Icons */}
-            <link
-                rel="icon"
-                href="/favicon-32x32.png"
-                sizes="32x32"
-            />
-            <link
-                rel="icon"
-                href="/favicon-192x192.png"
-                sizes="192x192"
-            />
-            <link
-                rel="apple-touch-icon"
-                href="/apple-touch-icon.png"
-            />
-            <meta
-                name="msapplication-TileImage"
-                content="/mstile-270x270.png"
-            />
+                {/* Navigation Links */}
+                <nav className="hidden md:flex gap-8">
+                    <Link href="/about">
+                        <a className="text-black dark:text-white hover:text-teal-500 transition-colors">
+                            About
+                        </a>
+                    </Link>
+                    <Link href="/services">
+                        <a className="text-black dark:text-white hover:text-teal-500 transition-colors">
+                            Services
+                        </a>
+                    </Link>
+                    <Link href="/contact">
+                        <a className="text-black dark:text-white hover:text-teal-500 transition-colors">
+                            Contact
+                        </a>
+                    </Link>
+                </nav>
 
-            {/* RSS / Feeds */}
-            <link
-                rel="alternate"
-                type="application/rss+xml"
-                title="Cinch Markets Feed"
-                href="https://cinchmarkets.com/feed/"
-            />
-            <link
-                rel="alternate"
-                type="application/rss+xml"
-                title="Cinch Markets Comments Feed"
-                href="https://cinchmarkets.com/comments/feed/"
-            />
-
-            {/* Styles */}
-            <link
-                rel="stylesheet"
-                href="https://cinchmarkets.com/wp-content/uploads/elementor/google-fonts/css/archivo.css"
-            />
-            <link
-                rel="stylesheet"
-                href="https://cinchmarkets.com/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css"
-            />
-
-            <link rel="canonical" href="https://cinchmarkets.com/" />
-            <link rel="shortlink" href="https://wp.me/Pe6EO8-m" />
-        </Head>
+                {/* Email / Contact */}
+                <div className="flex items-center gap-2">
+                    <Mail size={20} className="text-teal-500" />
+                    <a
+                        href="mailto:info@cinchmarkets.com"
+                        className="text-black dark:text-white hover:text-teal-500 transition-colors"
+                    >
+                        info@cinchmarkets.com
+                    </a>
+                </div>
+            </div>
+        </header>
     );
 }
