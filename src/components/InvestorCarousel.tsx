@@ -118,7 +118,7 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex overflow-x-hidden scroll-smooth space-x-12 py-8 no-scrollbar"
+        className="flex overflow-x-hidden scroll-smooth space-x-12 py-8 no-scrollbar hover:group"
       >
         {duplicatedLogos.map((logo, index) => (
           <div
@@ -131,7 +131,7 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
                 src={logo}
                 alt={`Investor logo ${index + 1}`}
                 fill
-                className="object-contain"
+                className="object-contain grayscale-80 hover:grayscale-100 "
                 sizes="320px"
                 
               />
