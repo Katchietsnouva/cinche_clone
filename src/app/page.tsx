@@ -8,6 +8,7 @@ import ScrollRevealSection from '@/components/ScrollRevealSection';
 import InfiniteCarousel from '@/components/InfiniteCarousel';
 import InvestorCarousel from '@/components/InvestorCarousel';
 import Image from 'next/image';
+import { Leaf } from 'lucide-react';
 
 // Carousel Data
 const PRODUCTS = [
@@ -107,6 +108,29 @@ export default function Home() {
       {/* Section 3: Supply Chain & Product Carousel */}
       <section className="relative min-h-screen bg-mycolor-warmWhite flex flex-col justify-center items-center px-4 py-16 z-10">
         <div className="max-w-4xl mx-auto text-center mb-12">
+
+          <div className='min-w-full mx-auto flex flex-row items-center '>
+            <div className='flex flex-row gap-3'>
+              {INVESTOR_LOGOS.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-1.5 h-1.5 rounded-full cursor-pointer bg-teal-500`}
+                />
+              ))}
+            </div>
+            <div >
+              <Image alt='secton' src={"/leaf.png"} width={200} height={200} className='w-24 h-24 rounded-2xl' />
+            </div>
+            <div className='flex flex-row gap-3'>
+              {INVESTOR_LOGOS.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-1.5 h-1.5 rounded-full cursor-pointer bg-teal-500`}
+                />
+              ))}
+            </div>
+          </div>
+
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -154,11 +178,11 @@ export default function Home() {
       <section className="py-20 bg-gray-100 z-10">
         <div className="container mx-auto px-4">
           <h3 className="text-5xl font-light text-center text-black mb-12">
-            Our Investors 
+            Our Investors
           </h3>
           <InvestorCarousel logos={INVESTOR_LOGOS} />
         </div>
       </section>
-    </main>
+    </main >
   );
 }

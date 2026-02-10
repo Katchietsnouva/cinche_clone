@@ -26,7 +26,7 @@ export default function ScrollRevealSection({
             <div className=" p-8 md:p-12 rounded-2xl max-w-3xl mx-4">
                 <motion.p
                     style={{ opacity: textOpacity }}
-                    className="text-3xl md:text-6xl font-extralight text-white mb-4 "
+                    className="text-3xl md:text-6xl capitalize text-white mb-4 "
                 >
                     Want to generate income from your idle Land? 
                 </motion.p> 
