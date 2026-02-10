@@ -131,7 +131,9 @@ export default function InvestorCarousel({ logos }: InvestorCarouselProps) {
                 src={logo}
                 alt={`Investor logo ${index + 1}`}
                 fill
-                className="object-contain grayscale-80 hover:grayscale-100 "
+                // className="object-contain grayscale-80 hover:grayscale-100 "
+                className="object-contain grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition duration-300"
+
                 sizes="320px"
                 
               />
